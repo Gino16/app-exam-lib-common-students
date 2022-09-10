@@ -10,6 +10,7 @@ import javax.persistence.PrePersist;
 import javax.persistence.Table;
 import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
+import javax.persistence.Transient;
 import javax.validation.constraints.Email;
 import javax.validation.constraints.NotEmpty;
 import lombok.Getter;
@@ -36,6 +37,9 @@ public class Student {
   private String email;
 
   private String photo;
+
+  @Transient
+  private String photoUrl;
 
   @Column(name = "create_at")
   @Temporal(TemporalType.DATE)
