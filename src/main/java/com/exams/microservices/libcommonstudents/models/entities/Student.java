@@ -35,6 +35,8 @@ public class Student {
   @Email
   private String email;
 
+  private String photo;
+
   @Column(name = "create_at")
   @Temporal(TemporalType.DATE)
   private Date createAt;
